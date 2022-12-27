@@ -1,0 +1,23 @@
+{% extends 'kltp/base1.html' %}
+    
+{% block title %}Hello {% endblock %}
+
+{% block content %}<div class = 'container1' id = 'head'>  
+    <div class = 'row'>
+        <div class ='col-md-6'>
+            <div class="t11"> 
+                <h1> Thông tin chi tiết</h1>
+                <h2>{{hinh}}<h2>
+                <h3>{{mota}}</h3>
+            </div>
+        </div>
+        <div class ='col-md-6'>
+            <div class="t12"> 
+                <img src={{anh}} alt ="{{hinh}}">
+            </div>
+        </div>
+    </div>        
+               
+</div>
+
+{% endblock %}

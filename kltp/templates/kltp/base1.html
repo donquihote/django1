@@ -1,0 +1,87 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'kltp/style/base1.css' %}">
+        {% block css %} {% endblock %}
+        
+    </head>
+
+    <body>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="{% url "trangchu" %}">
+                        <img width="30px" src="static/hinh/home.png" alt="home"/>
+                        <span>TRANG CHỦ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url "tuvan" %}">
+                        <img width="30px" src="static/hinh/thietke.png" alt="home"/>
+                        <span>TƯ VẤN THIẾT KẾ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="a">
+                        <img width="30px" src="static/hinh/thicong.png" alt="thicong"/>
+                        <span>THI CÔNG</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url "dongia" %}">
+                        <img width="30px" src="static/hinh/dongia.png" alt="dongia"/>
+                        <span>ĐƠN GIÁ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url "chothue" %}">
+                        <img width="30px" src="static/hinh/money.png" alt="muaban"/>
+                        <span>MUA BÁN-CHO THUÊ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url "lienhe" %}">
+                        <img width="30px" src="static/hinh/phone.png" alt="lienhe"/>
+                        <span>LIÊN HỆ</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+       <header>
+        <div class = "my-header">
+            <div class="col10">
+                <img src="static/hinh/logo.png" alt="logo">
+            </div>
+            <div class="col70">
+                <h1>CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ XÂY DỰNG SAO MỘC</h1>
+            </div>
+            <div class="col20">
+                <input type="text" placeholder="nhập nội dung"/>
+                <input type="button" value="Tìm kiếm" />
+            </div>
+        </div>
+       </header>
+             
+       {% block content %}
+       {% endblock %}
+
+       <footer class='ft'>
+        <h1> THÔNG TIN LIÊN HỆ</h1>        
+        <div>
+            <h2> CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG SAO MỘC </h2>
+            <p>Điện thoại : 0336895879</p>
+            <p>Địa chỉ: 47/80/38/54 Trường Lưu, Long Trường, Tp Thủ Đức, HCM</p>
+            <p>Wedsite: https://saomoc.com</p>
+            
+
+        </div>
+       </footer>
+        
+    </body>
+</html>

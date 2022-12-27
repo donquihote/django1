@@ -1,0 +1,7 @@
+div.container {
+    width: 50%;
+}
+
+div.container fieldset {
+    width: 100%;
+}

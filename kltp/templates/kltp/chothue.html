@@ -1,0 +1,74 @@
+{% extends 'kltp/base1.html' %}
+    
+{% block title %}cho thuê {% endblock %}
+
+{% block content %}
+
+<div class="tutorial__sect">
+    <div class="m-container">
+        <h2 class="n-title">Các sản phẩm cho thuê</h2>
+        <a href="/"><div class="step-box__wrap">
+            <div class="step-box__item"><div class="step-img">
+                <div class="fix-img"> <img src="/static/media/step-1.c204d3e1.svg" alt="Mioto - Thuê xe tự lái">
+                </div>
+            </div>
+            <div class="step-detail">
+                <h3>Bán và Cho Thuê Máy Xây Dựng/h3>
+            </div>
+        </div>
+        <div class="step-box__item">
+            <div class="step-img">
+                <div class="fix-img"> 
+                    <img src="/static/media/step-2.0bcadc00.svg" alt="Mioto - Thuê xe tự lái">
+                </div>
+            </div>
+            <div class="step-detail">
+                <h3>Bán Vật Liệu Xây Dựng</h3>
+            </div>
+        </div>
+        <div class="step-box__item">
+                <div class="step-img">
+                    <div class="fix-img">
+                         <img src="/static/media/step-3.5ee48572.svg" alt="Mioto - Thuê xe tự lái">
+                    </div>
+                </div>
+                <div class="step-detail">
+                    <h3>Bán và Cho Thuê Máy Móc Khác</h3>
+                </div>
+            </div>
+            <div class="step-box__item">
+                        <div class="step-img">
+                            <div class="fix-img"> 
+                                <img src="/static/media/step-4.518ab6a3.svg" alt="Mioto - Thuê xe tự lái">
+                            </div>
+                        </div>
+                        <div class="step-detail">
+                            <h3>Kết thúc giao dịch</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div>
+        <ul>
+            {% for ch in ten %}
+            <div class = 'row'>
+                <div class ='col-md-3' style="text-alight: center">
+                    <div class="{{ch.nganhnghe}}"> 
+                        {% if ch.id == 2 %}
+                            <h4>{{ch.nganhnghe}}</h4>
+                            <img src="{{ch.hinhanh.url}}" style="width: 200px;height: 120px;">
+                            <a href="{%url 'chitiet' ch.slug %}">{{ch.mangkinhdoanh}}</a>
+                            <p>{{ch.mota}}</p>
+                        {% endif %}
+                    </div>
+                </div>                  
+            </div>                
+                             
+            {% endfor %}
+        </ul>    
+        
+
+        
+{% endblock %}

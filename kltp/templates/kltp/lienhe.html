@@ -1,0 +1,33 @@
+{% extends 'kltp/base1.html' %}
+{%load static %}
+
+    
+{% block title %}lien hệ {% endblock %}
+{% block css %}  <link rel="stylesheet" href="{% static 'kltp/style/lienhe.css' %}"> {% endblock %}
+{% block content %}
+
+<div class="container">  
+    <form id="contact" action="" method="post">
+      <h3>LIÊN HỆ</h3>
+      <h4>Chúng tôi sẽ liên hệ ngay với bạn khi nhận được tin</h4>
+      <fieldset>
+        <input placeholder="Họ tên" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Email" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Số điện thoại" type="tel" tabindex="3" required>
+      </fieldset>
+      
+      <fieldset>
+        <textarea placeholder="Soạn tin" tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="gui" type="submit" id="contact-submit" data-submit="...Sending">GỬI</button>
+      </fieldset>
+    </form>
+   
+    
+  </div>
+{% endblock %}
